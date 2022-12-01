@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatting</title>
+    <style>
+        div {
+            background-color: beige;
+        }
+
+        /* section div>p {
+            color: red;
+        } */
+
+
+        section ::selection {
+            background-color: bisque;
+            color: burlywood;
+        }
+
+        .main-section div ol+p {
+            color: blue;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        a[href^="https"] {
+            background-color: green;
+            color: white;
+            position: relative;
+        }
+
+
+        a[href^="https"]::before {
+            content: "🔗";
+        }
+
+        a[href^="https"]:hover::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: red;
+            bottom: -2px;
+            left: 0;
+        }
+
+        a[href^="http://"] {
+            background-color: red;
+            color: white
+        }
+
+        a[href^="http://"]::before {
+            content: "❌"
+        }
+
+        a[href$=".avif"],
+        a[href$=".jpg"],
+        a[href$=".png"],
+        a[href$=".gif"] {
+            background-color: black;
+            color: white
+        }
+
+        a[href$=".avif"]::before {
+            content: "🖼";
+        }
+
+        input[placehoder~="name"] {
+            border: 2px solid coral;
+        }
+
+        ol li::marker {
+            content: "👮‍♀️";
+            color: rgb(233, 0, 194);
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="main-section">
+        <div>
+            <h1>Titolo principale</h1>
+            <p>Sottotitolo</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias debitis odio harum eligendi distinctio
+                deleniti placeat aliquid perferendis reprehenderit sint, sunt sed possimus necessitatibus beatae tempore
+                deserunt velit aspernatur maxime.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias debitis odio harum eligendi distinctio
+                deleniti placeat aliquid perferendis reprehenderit sint, sunt sed possimus necessitatibus beatae tempore
+                deserunt velit aspernatur maxime.</p>
+
+            <ol>
+                <li>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nostrum rerum ratione neque
+                        optio! Accusamus, optio quidem pariatur dolores consectetur iste at commodi a iusto animi nisi
+                        velit hic blanditiis?</p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nostrum rerum ratione neque
+                        optio! Accusamus, optio quidem pariatur dolores consectetur iste at commodi a iusto animi nisi
+                        velit hic blanditiis?</p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nostrum rerum ratione neque
+                        optio! Accusamus, optio quidem pariatur dolores consectetur iste at commodi a iusto animi nisi
+                        velit hic blanditiis?</p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nostrum rerum ratione neque
+                        optio! Accusamus, optio quidem pariatur dolores consectetur iste at commodi a iusto animi nisi
+                        velit hic blanditiis?</p>
+                </li>
+            </ol>
+            <header>
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum deleniti laborum adipisci beatae
+                        temporibus? In, temporibus voluptatibus. Fuga error tempora libero quo possimus architecto
+                        numquam
+                        vitae
+                        fugit neque harum? Asperiores.</p>
+                </div>
+            </header>
+
+            <p>Hey sono l'ultimo!</p>
+
+        </div>
+        <hr>
+
+    </section>
+
+    <main class="main-section">
+        <div>
+            <h1>Titolo principale</h1>
+            <a href="http://random-website.com" title="Hey">Sottotitolo1</a>
+            <a href="https://google.it" title="sottotitolo">Sottotitolo2</a>
+            <a href="photo-1669840526163-4713afd43773.avif" height="40" download>Immagine</a>
+        </div>
+
+        <input type="text" value="Stefano Miceli" placehoder="your name">
+        <input type="text" value="StefanoMiC" placehoder="user name">
+    </main>
+
+    <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores corporis doloremque rem consequatur. Atque
+        rem sint vel est ipsam, rerum totam dolorum illo sequi quos quaerat, odit, inventore provident aliquam?</p> -->
+
+</body>
+
+</html>
